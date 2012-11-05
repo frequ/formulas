@@ -1,0 +1,50 @@
+<com.formula.book.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe" >
+    
+    <!-- Algebra -->
+    <Button
+        android:id="@+id/btn_algebra"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_math"
+        android:text="Algebra" />
+ 
+    <!--  Trigonometry -->
+    <Button
+        android:id="@+id/btn_trigonometry"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_math"
+        android:text="Trigonometry" />
+ 
+    <!--  Geometry -->
+    <Button
+        android:id="@+id/btn_geometry"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_math"
+        android:text="Geometry" />
+ 
+    <!--  Vectors -->
+    <Button
+        android:id="@+id/btn_vectors"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_math"
+        android:text="Vectors" />
+ 
+    <!--  Integrals -->
+    <Button
+        android:id="@+id/btn_integrals"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_math"
+        android:text="Integrals" />
+ 
+    <!--  Derivative -->
+    <Button
+        android:id="@+id/btn_derivative"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_math"
+        android:text="Derivative" />
+    
+ </com.formula.book.DashboardLayout>
