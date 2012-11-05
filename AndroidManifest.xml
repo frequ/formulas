@@ -6,40 +6,53 @@
     <uses-sdk
         android:minSdkVersion="13"
         android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
         <activity
             android:label="@string/app_name"
-            android:name="com.formula.book.AndroidDashboardDesignActivity">
+            android:name=".AndroidDashboardDesignActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchableActivity" />
+        </activity>
+        
+        <!-- Search Activity -->
+        <activity android:name=".SearchableActivity"
+            	  android:label="@string/title_search_act">
+            <intent-filter> 
+                <action android:name="android.intent.action.SEARCH"></action> 
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" 
+                	   android:resource="@xml/searchable"/>
         </activity>
         
         <!-- Algebra Activity -->
-        <activity android:name="com.formula.book.AlgebraActivity" ></activity>
+        <activity android:name=".AlgebraActivity" >
+            <meta-data android:name="android.app.default_searchable"
+                   	   android:value=".SearchableActivity" />
+        </activity>
         
         <!-- Trigonometry Activity -->
-        <activity android:name="com.formula.book.TrigonometryActivity" ></activity>
+        <activity android:name=".TrigonometryActivity" ></activity>
         
         <!-- Geometry Activity -->
-        <activity android:name="com.formula.book.GeometryActivity" ></activity>
+        <activity android:name=".GeometryActivity" ></activity>
         
         <!-- Vectors Activity -->
-        <activity android:name="com.formula.book.VectorsActivity" ></activity>
+        <activity android:name=".VectorsActivity" ></activity>
         
         <!-- Integrals Activity -->
-        <activity android:name="com.formula.book.IntegralsActivity" ></activity>
+        <activity android:name=".IntegralsActivity" ></activity>
         
         <!-- Derivative Activity -->
-        <activity android:name="com.formula.book.DerivativeActivity" ></activity>
- 
-        
-        
+        <activity android:name=".DerivativeActivity" ></activity>
+
     </application>
 
 </manifest>
