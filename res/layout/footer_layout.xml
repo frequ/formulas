@@ -1,9 +1,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/FooterBar" >
-    <TextView android:text="plipplop"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#606060"
-            android:gravity="center"
-            android:paddingTop="10dip"/>
+    style="@style/FooterBar"
+    android:orientation="vertical"
+    android:layout_gravity="end">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:paddingTop="10dip"
+        android:text="Footer rules ok"
+        android:textColor="#606060" />
+
 </LinearLayout>

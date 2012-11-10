@@ -28,10 +28,11 @@ public final class R {
         public static final int btn_trigonometry=0x7f080003;
         public static final int btn_vectors=0x7f080005;
         public static final int home_root=0x7f080001;
-        public static final int menu_home=0x7f08000b;
-        public static final int menu_search=0x7f08000a;
-        public static final int menu_settings=0x7f080009;
+        public static final int menu_home=0x7f08000c;
+        public static final int menu_search=0x7f08000b;
+        public static final int menu_settings=0x7f08000a;
         public static final int tv=0x7f080000;
+        public static final int webView=0x7f080009;
     }
     public static final class layout {
         public static final int actionbar_inner_layout=0x7f030000;
@@ -42,6 +43,8 @@ public final class R {
         public static final int fragment_layout=0x7f030005;
         public static final int listview_layout=0x7f030006;
         public static final int search=0x7f030007;
+        public static final int test=0x7f030008;
+        public static final int webview=0x7f030009;
     }
     public static final class menu {
         public static final int activity_android_dashboard_design=0x7f070000;

@@ -42,6 +42,7 @@ public class SClient implements Runnable {
 		}
 		catch(Exception e){
 			Log.e("TCP", "C: Error", e);
+
 		}
 	}
 }

@@ -11,6 +11,17 @@
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
+        
+         <!-- Search Activity -->
+        <activity android:name=".SearchableActivity"
+            	  android:label="@string/title_search_act">
+            <intent-filter> 
+                <action android:name="android.intent.action.SEARCH"></action> 
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" 
+                	   android:resource="@xml/searchable"/>
+        </activity>
+        
         <activity
             android:label="@string/app_name"
             android:name=".AndroidDashboardDesignActivity">
@@ -22,36 +33,54 @@
                    android:value=".SearchableActivity" />
         </activity>
         
-        <!-- Search Activity -->
-        <activity android:name=".SearchableActivity"
-            	  android:label="@string/title_search_act">
-            <intent-filter> 
-                <action android:name="android.intent.action.SEARCH"></action> 
-            </intent-filter>
-            <meta-data android:name="android.app.searchable" 
-                	   android:resource="@xml/searchable"/>
-        </activity>
-        
         <!-- Algebra Activity -->
-        <activity android:name=".AlgebraActivity" >
+        <activity 
+           	android:name=".AlgebraActivity"
+           	android:label="Algebra" >
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> 
             <meta-data android:name="android.app.default_searchable"
-                   	   android:value=".SearchableActivity" />
+                   android:value=".SearchableActivity" />
         </activity>
         
         <!-- Trigonometry Activity -->
-        <activity android:name=".TrigonometryActivity" ></activity>
+        <activity android:name=".TrigonometryActivity" >
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchableActivity" />
+        </activity>
         
         <!-- Geometry Activity -->
-        <activity android:name=".GeometryActivity" ></activity>
+        <activity android:name=".GeometryActivity" >
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchableActivity" />
+        </activity>
         
         <!-- Vectors Activity -->
-        <activity android:name=".VectorsActivity" ></activity>
+        <activity android:name=".VectorsActivity" >
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchableActivity" />
+        </activity>
         
         <!-- Integrals Activity -->
-        <activity android:name=".IntegralsActivity" ></activity>
+        <activity android:name=".IntegralsActivity" >
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchableActivity" />
+        </activity>
         
         <!-- Derivative Activity -->
-        <activity android:name=".DerivativeActivity" ></activity>
+        <activity android:name=".DerivativeActivity" >
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchableActivity" />
+        </activity>
+        
+         <!-- Webview Activity -->
+        <activity android:name=".WebviewActivity"
+            	  android:label="@string/app_name" >
+        </activity>
+        
+       
 
     </application>
 
