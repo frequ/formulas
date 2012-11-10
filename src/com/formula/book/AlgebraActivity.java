@@ -1,24 +1,17 @@
 package com.formula.book;
 
-<<<<<<< HEAD
-import android.app.Activity;
+import android.app.ListActivity;
 import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.Context;
-=======
-import android.app.ListActivity;
->>>>>>> 99e47041a67ccf2ed09e4f13ce9b93b642f506f4
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD
-import android.widget.SearchView;
-=======
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
->>>>>>> 99e47041a67ccf2ed09e4f13ce9b93b642f506f4
+import android.widget.SearchView;
 import android.widget.TextView;
 
 public class AlgebraActivity extends ListActivity {
