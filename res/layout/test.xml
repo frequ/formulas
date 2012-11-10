@@ -3,16 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
-     <!-- Include Action Bar -->
+	
+            <!-- Include Action Bar -->
         <include layout="@layout/actionbar_inner_layout"/>
-        
-        <ListView
-  			android:id="@android:id/list"
-  			android:layout_width="match_parent"
- 			android:layout_height="wrap_content" >
-		</ListView> 
-		
-	<!--  Include Footer -->
+ 
+        <!--  Include Fragmented dashboard -->
+        <include layout="@layout/webview"/>   
+ 
+        <!--  Include Footer -->
         <include layout="@layout/footer_layout"/>
+
 </LinearLayout>

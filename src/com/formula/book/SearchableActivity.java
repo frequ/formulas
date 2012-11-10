@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 public class SearchableActivity extends Activity {
@@ -46,6 +47,7 @@ public class SearchableActivity extends Activity {
 
 	private void showRes(String obj) {
 		TextView result = (TextView)findViewById(R.id.Text1);
+		result.setMovementMethod(LinkMovementMethod.getInstance());
 		Spanned sp = Html.fromHtml(obj);
 		result.setText(sp);
 		
