@@ -2,7 +2,7 @@
     style="@style/FooterBar"
     android:orientation="vertical"
     android:layout_gravity="end">
-
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

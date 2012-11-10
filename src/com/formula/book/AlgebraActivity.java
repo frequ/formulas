@@ -20,12 +20,15 @@ public class AlgebraActivity extends ListActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		setContentView(R.layout.listview_layout);
-	
+		
+		
 		String[] subCategories = new String[] { "Elementary Algebra", "Polymonials", "Abstract Algebra"
 				, "Abstract Algebra", "Abstract Algebra", "Abstract Algebra", "Abstract Algebra"};
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
+		
+		
 		
 		/** Changes actionbar text */
 		String innerMath = "Algebra";
