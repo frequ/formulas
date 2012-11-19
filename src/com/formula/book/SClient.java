@@ -23,7 +23,7 @@ public class SClient implements Runnable {
 		
 		Message msg;
 		try{
-			URL myUrl = new URL("http://users.metropolia.fi/~villevsa/android/hurrr.php?formulas="+param);
+			URL myUrl = new URL("http://users.metropolia.fi/~samisuov/android/search.php?formulas="+param);
 			BufferedReader in = new BufferedReader(new InputStreamReader(myUrl.openStream()));
 			serverResp="";
 			String inStr;
