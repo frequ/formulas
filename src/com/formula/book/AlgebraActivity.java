@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 470cac1... updated search url and added assets
 package com.formula.book;
 
 import android.app.ListActivity;
@@ -32,7 +35,11 @@ public class AlgebraActivity extends ListActivity {
 		
 		
 		/** Changes actionbar text */
+<<<<<<< HEAD
 		String innerMath = "Algebra"; 
+=======
+		String innerMath = "Algebra";
+>>>>>>> parent of 470cac1... updated search url and added assets
 		TextView text = (TextView) findViewById(R.id.tv);
 		text.setText(innerMath);
 	}
@@ -104,6 +111,7 @@ public class AlgebraActivity extends ListActivity {
 		}
 	}
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 package com.formula.book;
@@ -319,3 +327,5 @@ public class AlgebraActivity extends ListActivity {
 }
 >>>>>>> origin
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 470cac1... updated search url and added assets
