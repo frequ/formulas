@@ -31,7 +31,7 @@ public class AlgebraActivity extends ListActivity {
 		
 		
 		/** Changes actionbar text */
-		String innerMath = "Algebra";
+		String innerMath = "Algebra"; 
 		TextView text = (TextView) findViewById(R.id.tv);
 		text.setText(innerMath);
 	}
