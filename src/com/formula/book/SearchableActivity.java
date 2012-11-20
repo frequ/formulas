@@ -10,7 +10,9 @@ import android.os.Message;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.widget.TextView;
+import android.widget.TextView.BufferType;
 
 public class SearchableActivity extends Activity {
 	
@@ -47,9 +49,9 @@ public class SearchableActivity extends Activity {
 
 	private void showRes(String obj) {
 		TextView result = (TextView)findViewById(R.id.Text1);
-		result.setMovementMethod(LinkMovementMethod.getInstance());
+		result.setMovementMethod(LinkMovementMethod.getInstance());		
 		Spanned sp = Html.fromHtml(obj);
-		result.setText(sp);
+		result.setText(sp, BufferType.SPANNABLE);
 		
 	}
 }
