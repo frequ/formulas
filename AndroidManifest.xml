@@ -80,7 +80,7 @@
             	  android:label="@string/app_name" >
         </activity>
         
-       
+       <activity android:name=".SClient"></activity>
 
     </application>
 

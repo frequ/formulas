@@ -51,7 +51,7 @@ public class SearchableActivity extends Activity {
 		TextView result = (TextView)findViewById(R.id.Text1);
 		result.setMovementMethod(LinkMovementMethod.getInstance());		
 		Spanned sp = Html.fromHtml(obj);
-		result.setText(sp, BufferType.SPANNABLE);
+		result.setText(sp);
 		
 	}
 }

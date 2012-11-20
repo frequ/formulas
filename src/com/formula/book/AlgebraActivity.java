@@ -22,8 +22,7 @@ public class AlgebraActivity extends ListActivity {
 		setContentView(R.layout.listview_layout);
 		
 		
-		String[] subCategories = new String[] { "Elementary Algebra", "Polymonials", "Abstract Algebra"
-				, "Abstract Algebra", "Abstract Algebra", "Abstract Algebra", "Abstract Algebra"};
+		String[] subCategories = new String[] { "Elementary Algebra", "Polymonials", "Abstract Algebra"};
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
