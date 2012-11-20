@@ -9,42 +9,42 @@
     <Button
         android:id="@+id/btn_algebra"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_math"
+        android:drawableTop="@drawable/btn_algebra"
         android:text="Algebra" />
  
     <!--  Trigonometry -->
     <Button
         android:id="@+id/btn_trigonometry"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_math"
+        android:drawableTop="@drawable/btn_trigonometry"
         android:text="Trigonometry" />
  
     <!--  Geometry -->
     <Button
         android:id="@+id/btn_geometry"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_math"
+        android:drawableTop="@drawable/btn_geometry"
         android:text="Geometry" />
  
     <!--  Vectors -->
     <Button
         android:id="@+id/btn_vectors"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_math"
+        android:drawableTop="@drawable/btn_vectors"
         android:text="Vectors" />
  
     <!--  Integrals -->
     <Button
         android:id="@+id/btn_integrals"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_math"
+        android:drawableTop="@drawable/btn_integrals"
         android:text="Integrals" />
  
     <!--  Derivative -->
     <Button
         android:id="@+id/btn_derivative"
         style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn_math"
+        android:drawableTop="@drawable/btn_derivative"
         android:text="Derivative" />
     
  </com.formula.book.DashboardLayout>
