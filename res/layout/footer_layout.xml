@@ -1,9 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/FooterBar"
     android:orientation="vertical"
-    android:layout_gravity="end">
+    android:layout_gravity="end"
+    android:id="@+id/footer_layout_root">
 
-    <TextView
+<TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

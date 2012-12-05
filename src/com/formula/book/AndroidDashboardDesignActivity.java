@@ -121,9 +121,13 @@ public class AndroidDashboardDesignActivity extends Activity {
 		SearchableInfo info = searchManager.getSearchableInfo(getComponentName());
 		mSearchView.setSearchableInfo(info);
 		mSearchView.setIconifiedByDefault(true);
+		
+
+		
 		return true;
 		
 	}
+	
 	
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()) {

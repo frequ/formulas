@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/webView"
-    android:layout_width="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-/>
+    android:orientation="vertical" >
+    
+	<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/webView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="40dp"
+	/>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    style="@style/FooterBar"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="vertical"
+	    android:id="@+id/footer_layout_root">
+	
+		<TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="bottom"
+		        android:layout_weight="0"
+		        android:gravity="center"
+		        android:paddingTop="10dip"
+		        android:text="Footer rules ok"
+		        android:textColor="#606060" />
+	
+	</LinearLayout>
+</RelativeLayout>

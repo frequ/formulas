@@ -6,9 +6,11 @@ import android.app.SearchableInfo;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -21,8 +23,7 @@ public class AlgebraActivity extends ListActivity {
 		super.onCreate(icicle);
 		setContentView(R.layout.listview_layout);
 		
-		
-		String[] subCategories = new String[] { "Elementary Algebra", "Polymonials", "Abstract Algebra"};
+		String[] subCategories = new String[] { "Elementary Algebra", "Polymonials", "Abstract Algebra", "Elementary Algebra", "Polymonials", "Abstract Algebra", "Elementary Algebra", "Polymonials", "Abstract Algebra"};
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
@@ -77,7 +78,7 @@ public class AlgebraActivity extends ListActivity {
 		SearchView mSearchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
 		SearchableInfo info = searchManager.getSearchableInfo(getComponentName());
 		mSearchView.setSearchableInfo(info);
-		mSearchView.setIconifiedByDefault(true);
+		mSearchView.setIconifiedByDefault(true);	
 		return true;
 		
 	}

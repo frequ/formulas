@@ -4,15 +4,18 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
+import android.app.AlertDialog;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.widget.Toast;
 
 public class SClient implements Runnable {
 	
 	private Handler ui;
 	private String param;
 	private String serverResp;
+	private String inStr;
 	
 	public SClient(Handler uiHandler, String searchText) {
 		ui = uiHandler;
@@ -26,9 +29,8 @@ public class SClient implements Runnable {
 			URL myUrl = new URL("http://users.metropolia.fi/~samisuov/android/search.php?formulas="+param);
 			BufferedReader in = new BufferedReader(new InputStreamReader(myUrl.openStream()));
 			serverResp="";
-			String inStr;
 			
-			while ((inStr = in.readLine()) != null)
+			while ((inStr = in.readLine())  != null)
 			{
 				serverResp = serverResp + inStr;
 				
@@ -41,10 +43,16 @@ public class SClient implements Runnable {
 			ui.sendMessage(msg);
 		}
 		catch(Exception e){
+			
 			Log.e("TCP", "C: Error", e);
+			//Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+			inStr = null;
 
 		}
 	}
+
+
+	
 }
 
 	

@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-     <!-- Include Action Bar -->
-        <include layout="@layout/actionbar_inner_layout"/>
-        
-        <ListView
-  			android:id="@android:id/list"
-  			android:layout_width="match_parent"
- 			android:layout_height="wrap_content" >
-		</ListView> 
-		
-	<!--  Include Footer -->
-        <include layout="@layout/footer_layout"/>
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true" >
+	
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActionBarCompat" >
+ 
+	<TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center" />
+	</LinearLayout>
+	        
+	<ListView
+	  			android:id="@android:id/list"
+	  			android:layout_width="match_parent"
+	 			android:layout_height="wrap_content"
+	 			android:layout_marginTop="52dp"
+	 			android:layout_marginBottom="40dp" >
+	</ListView> 
+			
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    style="@style/FooterBar"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="vertical"
+	    android:id="@+id/footer_layout_root">
+	
+		<TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="bottom"
+		        android:layout_weight="0"
+		        android:gravity="center"
+		        android:paddingTop="10dip"
+		        android:text="Footer rules ok"
+		        android:textColor="#606060" />
+	
+	</LinearLayout>
+</RelativeLayout>
