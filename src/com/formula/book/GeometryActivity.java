@@ -1,6 +1,6 @@
 package com.formula.book;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.Context;
@@ -8,23 +8,65 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.formula.book.R;
 
-public class GeometryActivity extends Activity {
+public class GeometryActivity extends ListActivity {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 		
+		String[] subCategories = new String[] { "Area Formulas", "Circles", "Surface Area Formulas", "Volume Formulas"};
+				
+		ArrayAdapter<String> adapterGeo = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
+		setListAdapter(adapterGeo);
+		
 		/** Changes actionbar text */
 		String innerMath = "Geometry";
 		TextView text = (TextView) findViewById(R.id.tv);
 		text.setText(innerMath);
 	}
+
+	public void onListItemClick(ListView l, View v, int position, long id) {
+			
+		String item = (String) getListAdapter().getItem(position);
+		
+			if(item.equals("Polymonials")){
+				Intent i = new Intent(getApplicationContext(),
+						WebviewActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("url","file:///android_asset/html/hello.htm");
+				bundle.putString("header", "Algebra / Polymonials");
+				i.putExtras(bundle);
+				startActivity(i);
+				
+			}else if(item.equals("Elementary Algebra")){
+				Intent i = new Intent(getApplicationContext(),
+						WebviewActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("url","file:///android_asset/html/0.htm");
+				bundle.putString("header", "Algebra / Elementary Algebra");
+				i.putExtras(bundle);
+				startActivity(i);
+				
+			}else if(item.equals("Abstract Algebra")){				
+				Intent i = new Intent(getApplicationContext(),
+						WebviewActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("url","file:///android_asset/html/2.htm");
+				bundle.putString("header", "Algebra / Abstract Algebra");
+				i.putExtras(bundle);
+				startActivity(i);
+			}
+			
+			
+	  }
 	
 	public boolean onCreateOptionsMenu(Menu menu){
 		getMenuInflater().inflate(R.menu.main, menu);
