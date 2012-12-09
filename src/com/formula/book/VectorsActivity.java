@@ -1,6 +1,6 @@
 package com.formula.book;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.Context;
@@ -8,22 +8,53 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.formula.book.R;
-
-public class VectorsActivity extends Activity {
+public class VectorsActivity extends ListActivity {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 		
+		String[] subCategories = new String[] { "Vector Basic Formulas", "Vector Basic Formulas II"};
+		
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
+		setListAdapter(adapter);
+		
 		/** Changes actionbar text */
 		String innerMath = "Vectors";
 		TextView text = (TextView) findViewById(R.id.tv);
 		text.setText(innerMath);
+	}
+	
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id) {
+			
+		String item = (String) getListAdapter().getItem(position);
+		
+			if(item.equals("Vector Basic Formulas")){
+				Intent i = new Intent(getApplicationContext(),
+						WebviewActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("url","file:///android_asset/html/vector-formulas.html");
+				bundle.putString("header", "Vectors / Basics");
+				i.putExtras(bundle);
+				startActivity(i);
+				
+			}else if(item.equals("Vector Basic Formulas II")){
+				Intent i = new Intent(getApplicationContext(),
+						WebviewActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("url","file:///android_asset/html/vector-formulas2");
+				bundle.putString("header", "Vectors / Basics II");
+				i.putExtras(bundle);
+				startActivity(i);
+			}
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu){
