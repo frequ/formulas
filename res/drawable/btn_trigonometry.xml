@@ -1,13 +1,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/trigonometry_pressed"
+    <item android:drawable="@drawable/trig_3"
         android:state_focused="true"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/trigonometry_pressed"
+    <item android:drawable="@drawable/trig_3"
         android:state_focused="false"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/trigonometry" 
+    <item android:drawable="@drawable/trig_2" 
         android:state_focused="true" />
-    <item android:drawable="@drawable/trigonometry"
+    <item android:drawable="@drawable/trig_1"
         android:state_focused="false"
         android:state_pressed="false" />
 </selector>
