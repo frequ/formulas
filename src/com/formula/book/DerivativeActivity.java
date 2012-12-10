@@ -14,6 +14,9 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+
+import com.formula.book.R;
+
 public class DerivativeActivity extends ListActivity {
 	/** Called when the activity is first created. */
 	@Override
@@ -21,8 +24,9 @@ public class DerivativeActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 		
-		String[] subCategories = new String[] { "Basics", "Basics II", "Definition", "Exponentials", "Higher Order Derivatives", 
-				"Derivate of Exponential and Logarithmic functions", "Derivative of Trigonometric Functions"};
+
+		String[] subCategories = new String[] { "Basics", "Basics part 2", "Derivative definition", "Derivative exponential", 
+				"Higher order derivatives", "Derivative hyperbolic", "Derivative trigonometric"};
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
@@ -42,68 +46,68 @@ public class DerivativeActivity extends ListActivity {
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-basic.html");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-basic/derivative-basic.html");
 				bundle.putString("header", "Derivative / Basics");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Basics II")){
+
+			}else if(item.equals("Basics part 2")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-basic2.html");
-				bundle.putString("header", "Derivative / Basics II");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-basic2/derivative-basic2.html");
+				bundle.putString("header", "Derivative / Basics part 2");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Definition")){				
+			}else if(item.equals("Derivative definition")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-definition.html");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-definition/derivative-definition.html");
 				bundle.putString("header", "Derivative / Definition");
 				i.putExtras(bundle);
 				startActivity(i);
-				
-			}else if(item.equals("Exponentials")){				
+
+			}else if(item.equals("Derivative exponential")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-exponential.html");
-				bundle.putString("header", "Derivative / Exponentials");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-exponential/derivative-exponential.html");
+				bundle.putString("header", "Derivative / Exponential");
 				i.putExtras(bundle);
 				startActivity(i);
-				
-			}else if(item.equals("Higher Order Derivatives")){				
+			
+			}else if(item.equals("Higher order derivatives")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-higher.html");
-				bundle.putString("header", "Derivative / Higher Order Derivatives");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-higher/derivative-higher.html");
+				bundle.putString("header", "Derivative / Higher order derivatives");
 				i.putExtras(bundle);
 				startActivity(i);
-				
-			}else if(item.equals("Derivate of Exponential and Logarithmic functions")){				
+			
+			}else if(item.equals("Derivative hyperbolic")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-hyperbolic.html");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-hyperbolic/derivative-hyperbolic.html");
 				bundle.putString("header", "Derivative / Hyperbolic");
 				i.putExtras(bundle);
 				startActivity(i);
-				
-			}else if(item.equals("Derivative of Trigonometric Functions")){				
+			
+			}else if(item.equals("Derivative trigonometric")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/derivative-trigonometric.html");
-				bundle.putString("header", "Derivative / Trigonometric Functions");
+				bundle.putString("url","file:///android_asset/html/derivative/derivative-trigonometric/derivative-trigonometric.html");
+				bundle.putString("header", "Derivative / Trigonmetric");
 				i.putExtras(bundle);
 				startActivity(i);
-			}
 			
+			}
 	  }
-	
 	
 	
 	public boolean onCreateOptionsMenu(Menu menu){
@@ -133,4 +137,3 @@ public class DerivativeActivity extends ListActivity {
 		}
 	}
 }
-

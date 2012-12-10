@@ -44,7 +44,7 @@ public class TrigonometryActivity extends ListActivity {
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/trigonometric-graphs.html");
+				bundle.putString("url","file:///android_asset/html/trigonometric/trigonometric-graphs/trigonometric-graphs.html");
 				bundle.putString("header", "Trigononometry / Trigonometric Graphs");
 				i.putExtras(bundle);
 				startActivity(i);
@@ -53,7 +53,7 @@ public class TrigonometryActivity extends ListActivity {
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/trigonometric-identities.html");
+				bundle.putString("url","file:///android_asset/html/trigonometric/trigonometric-identities/trigonometric-identities.html");
 				bundle.putString("header", "Trigononometry / Trigonometric Identities");
 				i.putExtras(bundle);
 				startActivity(i);

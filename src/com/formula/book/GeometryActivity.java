@@ -24,8 +24,8 @@ public class GeometryActivity extends ListActivity {
 		
 		String[] subCategories = new String[] { "Area Formulas", "Circles", "Surface Area Formulas", "Volume Formulas"};
 				
-		ArrayAdapter<String> adapterGeo = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
-		setListAdapter(adapterGeo);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
+		setListAdapter(adapter);
 		
 		/** Changes actionbar text */
 		String innerMath = "Geometry";
@@ -37,30 +37,38 @@ public class GeometryActivity extends ListActivity {
 			
 		String item = (String) getListAdapter().getItem(position);
 		
-			if(item.equals("Polymonials")){
+			if(item.equals("Area Formulas")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/hello.htm");
-				bundle.putString("header", "Algebra / Polymonials");
+				bundle.putString("url","file:///android_asset/html/geometry/area-formulas/area-formulas.html");
+				bundle.putString("header", "Geometry / Area Formulas");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Elementary Algebra")){
+			}else if(item.equals("Circles")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/0.htm");
-				bundle.putString("header", "Algebra / Elementary Algebra");
+				bundle.putString("url","file:///android_asset/html/geometry/circles/circles.html");
+				bundle.putString("header", "Algebra / Circles");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Abstract Algebra")){				
+			}else if(item.equals("Surface Area Formulas")){				
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/2.htm");
-				bundle.putString("header", "Algebra / Abstract Algebra");
+				bundle.putString("url","file:///android_asset/html/geometry/surface-area-formulas/surface-area-formulas.html");
+				bundle.putString("header", "Algebra / Surface Area Formulas");
+				i.putExtras(bundle);
+				startActivity(i);
+			}else if(item.equals("Volume Formulas")){				
+				Intent i = new Intent(getApplicationContext(),
+						WebviewActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("url","file:///android_asset/html/geometry/volume-formulas/volume-formulas.html");
+				bundle.putString("header", "Algebra / Volume Formulas");
 				i.putExtras(bundle);
 				startActivity(i);
 			}

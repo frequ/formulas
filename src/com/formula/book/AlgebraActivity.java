@@ -6,11 +6,9 @@ import android.app.SearchableInfo;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -23,7 +21,7 @@ public class AlgebraActivity extends ListActivity {
 		super.onCreate(icicle);
 		setContentView(R.layout.listview_layout);
 		
-		String[] subCategories = new String[] { "Elementary Algebra", "Polymonials", "Abstract Algebra", "Elementary Algebra", "Polymonials", "Abstract Algebra", "Elementary Algebra", "Polymonials", "Abstract Algebra"};
+		String[] subCategories = new String[] { "Formulas","Identities"};
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
@@ -41,32 +39,24 @@ public class AlgebraActivity extends ListActivity {
 			
 		String item = (String) getListAdapter().getItem(position);
 		
-			if(item.equals("Polymonials")){
+			if(item.equals("Formulas")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/hello.htm");
-				bundle.putString("header", "Algebra / Polymonials");
+				bundle.putString("url","file:///android_asset/html/algebra/algebraic-formulas/algebraic-formulas.html");
+				bundle.putString("header", "Algebra / Algebraic Formulas");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Elementary Algebra")){
+			}else if(item.equals("Identities")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/0.htm");
-				bundle.putString("header", "Algebra / Elementary Algebra");
+				bundle.putString("url","file:///android_asset/html/algebra/algebraic-identities/algebraic-identities.html");
+				bundle.putString("header", "Algebra / Algebraic Identities");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Abstract Algebra")){				
-				Intent i = new Intent(getApplicationContext(),
-						WebviewActivity.class);
-				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/2.htm");
-				bundle.putString("header", "Algebra / Abstract Algebra");
-				i.putExtras(bundle);
-				startActivity(i);
 			}
 			
 			

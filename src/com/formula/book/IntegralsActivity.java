@@ -14,6 +14,9 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+
+import com.formula.book.R;
+
 public class IntegralsActivity extends ListActivity {
 	/** Called when the activity is first created. */
 	@Override
@@ -21,8 +24,9 @@ public class IntegralsActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 		
-		String[] subCategories = new String[] { "Exponential Functions", "Logarithmic Functions", "Rational Functions", "Trigonometric Functions"};
-		
+
+		String[] subCategories = new String[] { "Exponential", "Logarithms", "Rational", "Trigonometric"};
+
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
 		
@@ -36,44 +40,44 @@ public class IntegralsActivity extends ListActivity {
 	public void onListItemClick(ListView l, View v, int position, long id) {
 			
 		String item = (String) getListAdapter().getItem(position);
-		
-			if(item.equals("Exponential Functions")){
+
+			if(item.equals("Exponential")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/integrals-exponential.html");
-				bundle.putString("header", "Integrals / Exponential Functions");
+				bundle.putString("url","file:///android_asset/html/integrals/integrals-exponential/integrals-exponential.html");
+				bundle.putString("header", "Integrals / Exponential");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Logarithmic Functions")){
+			}else if(item.equals("Logarithms")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/integrals-logarithms.html");
-				bundle.putString("header", "Integrals / Logarithmic Functions");
+				bundle.putString("url","file:///android_asset/html/integrals/integrals-logarithms/integrals-logarithms.html");
+				bundle.putString("header", "Integrals / Logarithms");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Rational Functions")){				
+			}else if(item.equals("Rational")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/integrals-rational.html");
-				bundle.putString("header", "Integrals / Rational Functions");
+				bundle.putString("url","file:///android_asset/html/integrals/integrals-rational/integrals-rational.html");
+				bundle.putString("header", "Integrals / Rational");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Trigonometric Functions")){				
+			}else if(item.equals("Trigonometric")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/integrals-trigonometric.html");
-				bundle.putString("header", "Integrals / Trigonometrics Functions");
+				bundle.putString("url","file:///android_asset/html/integrals/integrals-trigonometric/integrals-trigonometric.html");
+				bundle.putString("header", "Integrals / Trigonometric");
 				i.putExtras(bundle);
-				startActivity(i);
+				startActivity(i);			
 			}
-			
+
 	  }
 	
 	public boolean onCreateOptionsMenu(Menu menu){

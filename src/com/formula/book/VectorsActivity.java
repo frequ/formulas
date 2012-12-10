@@ -14,6 +14,8 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.formula.book.R;
+
 public class VectorsActivity extends ListActivity {
 	/** Called when the activity is first created. */
 	@Override
@@ -21,7 +23,8 @@ public class VectorsActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 		
-		String[] subCategories = new String[] { "Vector Basic Formulas", "Vector Basic Formulas II"};
+		String[] subCategories = new String[] { "Formulas", "Formulas part 2"};
+
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subCategories);
 		setListAdapter(adapter);
@@ -37,25 +40,27 @@ public class VectorsActivity extends ListActivity {
 			
 		String item = (String) getListAdapter().getItem(position);
 		
-			if(item.equals("Vector Basic Formulas")){
+
+			if(item.equals("Formulas")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/vector-formulas.html");
-				bundle.putString("header", "Vectors / Basics");
+				bundle.putString("url","file:///android_asset/html/vectors/vector-formulas/vector-formulas.html");
+				bundle.putString("header", "Vectors / Formulas");
 				i.putExtras(bundle);
 				startActivity(i);
 				
-			}else if(item.equals("Vector Basic Formulas II")){
+			}else if(item.equals("Formulas part 2")){
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/vector-formulas2");
-				bundle.putString("header", "Vectors / Basics II");
+				bundle.putString("url","file:///android_asset/html/vectors/vector-formulas2/vector-formulas2.html");
+				bundle.putString("header", "Vectors / Formulas part 2");
 				i.putExtras(bundle);
 				startActivity(i);
+				
 			}
-	}
+	  }
 	
 	public boolean onCreateOptionsMenu(Menu menu){
 		getMenuInflater().inflate(R.menu.main, menu);

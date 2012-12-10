@@ -18,7 +18,7 @@ public class AndroidDashboardDesignActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard_layout);
 
-
+ 
 		/**
 		 * Creating all button instances
 		 * */
