@@ -50,7 +50,7 @@ public class VectorsActivity extends ListActivity {
 				Intent i = new Intent(getApplicationContext(),
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("url","file:///android_asset/html/vector-formulas2");
+				bundle.putString("url","file:///android_asset/html/vector-formulas2.html");
 				bundle.putString("header", "Vectors / Basics II");
 				i.putExtras(bundle);
 				startActivity(i);
