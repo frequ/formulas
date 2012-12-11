@@ -17,8 +17,8 @@ import android.widget.TextView;
 public class AlgebraActivity extends ListActivity {
 	/** Called when the activity is first created. */
 	@Override
-	public void onCreate(Bundle icicle) {
-		super.onCreate(icicle);
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 		
 		String[] subCategories = new String[] { "Formulas","Identities"};
@@ -63,7 +63,7 @@ public class AlgebraActivity extends ListActivity {
 	  }
 
 	public boolean onCreateOptionsMenu(Menu menu){
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.landing, menu);
 		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 		SearchView mSearchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
 		SearchableInfo info = searchManager.getSearchableInfo(getComponentName());
@@ -81,10 +81,6 @@ public class AlgebraActivity extends ListActivity {
 					AndroidDashboardDesignActivity.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
-			return true;
-			
-		case R.id.menu_search:
-			onSearchRequested();
 			return true;
 
 		default:

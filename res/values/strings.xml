@@ -1,11 +1,12 @@
 <resources>
 
-    <string name="app_name">Formula Book</string>
+    <string name="app_name">Maths Guide</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_android_dashboard_design">AndroidDashboardDesignActivity</string>
     <string name="search_hint">Find formulas!</string>
     <string name="title_search_act">Found formulas</string>
+    <string name="formulas">Find your formulas!</string>
     
 
 </resources>
