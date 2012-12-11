@@ -1,6 +1,10 @@
 <resources>
 
+<<<<<<< HEAD
     <string name="app_name">Maths Guide</string>
+=======
+    <string name="app_name"> </string>
+>>>>>>> 4363570b7562572769274650f5cbad1f5060822f
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_android_dashboard_design">AndroidDashboardDesignActivity</string>

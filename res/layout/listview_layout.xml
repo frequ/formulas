@@ -22,7 +22,11 @@
 	 			android:layout_height="wrap_content"
 	 			android:layout_marginTop="52dp"
 	 			android:layout_marginBottom="40dp"
+<<<<<<< HEAD
 	 			 >
+=======
+	 			android:background="#CFE8D0" >
+>>>>>>> 4363570b7562572769274650f5cbad1f5060822f
 	</ListView> 
 			
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
