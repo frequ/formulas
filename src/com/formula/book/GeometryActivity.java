@@ -51,7 +51,7 @@ public class GeometryActivity extends ListActivity {
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putString("url","file:///android_asset/html/geometry/circles/circles.html");
-				bundle.putString("header", "Algebra / Circles");
+				bundle.putString("header", "Geometry / Circles");
 				i.putExtras(bundle);
 				startActivity(i);
 				
@@ -60,7 +60,7 @@ public class GeometryActivity extends ListActivity {
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putString("url","file:///android_asset/html/geometry/surface-area-formulas/surface-area-formulas.html");
-				bundle.putString("header", "Algebra / Surface Area Formulas");
+				bundle.putString("header", "Geometry / Surface Area Formulas");
 				i.putExtras(bundle);
 				startActivity(i);
 			}else if(item.equals("Volume Formulas")){				
@@ -68,7 +68,7 @@ public class GeometryActivity extends ListActivity {
 						WebviewActivity.class);
 				Bundle bundle = new Bundle();
 				bundle.putString("url","file:///android_asset/html/geometry/volume-formulas/volume-formulas.html");
-				bundle.putString("header", "Algebra / Volume Formulas");
+				bundle.putString("header", "Geometry / Volume Formulas");
 				i.putExtras(bundle);
 				startActivity(i);
 			}
@@ -77,7 +77,7 @@ public class GeometryActivity extends ListActivity {
 	  }
 	
 	public boolean onCreateOptionsMenu(Menu menu){
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.landing, menu);
 		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 		SearchView mSearchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
 		SearchableInfo info = searchManager.getSearchableInfo(getComponentName());

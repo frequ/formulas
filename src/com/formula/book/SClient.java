@@ -1,11 +1,13 @@
 package com.formula.book;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
@@ -22,37 +24,40 @@ public class SClient implements Runnable {
 		param = searchText;
 	}
 	
+	
+	
 	public void run() {
-		
 		Message msg;
+		BufferedReader reader = null;
 		try{
 			URL myUrl = new URL("http://users.metropolia.fi/~samisuov/android/search.php?formulas="+param);
-			BufferedReader in = new BufferedReader(new InputStreamReader(myUrl.openStream()));
+			reader= new BufferedReader(new InputStreamReader(myUrl.openStream()));
 			serverResp="";
 			
-			while ((inStr = in.readLine())  != null)
-			{
-				serverResp = serverResp + inStr;
-				
-			}
 
-			in.close();
+			
+			while((inStr = reader.readLine())  != null){
+				serverResp = serverResp + inStr;
+			}
+			
+			reader.close();
 			msg = ui.obtainMessage();
 			msg.obj = serverResp;
 			msg.what = 0;
 			ui.sendMessage(msg);
-		}
-		catch(Exception e){
 			
-			Log.e("TCP", "C: Error", e);
-			//Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-			inStr = null;
+			
 
+			
+		}catch(IOException e){
+			Log.e("TCP", "C: Error", e);
+			
+		}finally{
+			System.err.println("Connection timed out");
 		}
 	}
 
 
-	
 }
 
 	
